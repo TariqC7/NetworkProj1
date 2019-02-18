@@ -91,3 +91,7 @@ void msg(void)  {
         /* Send message to the server */
             //n = write(sockfd,buffer,strlen(buffer));
             n = write(sockfd,buffer,strlen(buffer)+1);
+        if (n < 0)  {
+                perror("ERROR writing to socket");
+                exit(1);
+            }
