@@ -102,3 +102,9 @@ void msg(void)  {
                 perror("ERROR reading from socket");
                 exit(1);
             }
+            if(strncmp(buffer,"Q",1)==0) {
+                mainMenu();
+            }
+    }
+}
+            
