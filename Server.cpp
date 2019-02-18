@@ -64,3 +64,9 @@ int main( int argc, char *argv[] )
     perror("setsockopt");
     exit(1);
     }
+    
+    /*start listening for clients, will go into sleep mode and wait for incoming connection*/
+    listen(sockfd,5);
+    len = sizeof(cli_addr);
+     while(connected == false) {
+        newsockfd = accept(sockfd,(struct sockaddr*)&cli_addr,&len);
