@@ -18,3 +18,8 @@ void mainMenu();
 int sockfd, portno, n;
 struct sockaddr_in serv_addr;
 struct hostent *server;
+bool loop = false;
+char options[100];
+char buffer[255];
+int choice;
+char c;
