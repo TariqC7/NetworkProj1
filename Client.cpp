@@ -85,3 +85,9 @@ void msg(void)  {
     std::cout << " " << std::endl;
      /*ask for a message from the user, this message will be read by server */
     std::cout << "Please enter the message : \n" <<std::endl;
+    bzero(buffer,256);
+    while(fgets(buffer,255,stdin)) {
+        printf("User Input: %s",buffer);
+        /* Send message to the server */
+            //n = write(sockfd,buffer,strlen(buffer));
+            n = write(sockfd,buffer,strlen(buffer)+1);
