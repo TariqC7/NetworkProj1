@@ -19,3 +19,9 @@ void doProcessing(int sock) {
         perror("Error from reading socket");
         exit(1);
     }
+    
+    if(n > 0) {
+        printf("Here is the msg: %s\n",buffer);
+        n=write(sock,"I got your msg",18);
+    }
+    
