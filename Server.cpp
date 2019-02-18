@@ -74,4 +74,8 @@ int main( int argc, char *argv[] )
             perror("Error on accept!");
             exit(1);
             }
-         
+         /*Create chlid process*/
+        pid =fork();
+        if(pid < 0)
+        {
+            perror("Error on fork!");
