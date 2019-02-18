@@ -80,4 +80,8 @@ void mainMenu() {
             break;
         }
 }
-                
+void msg(void)  {
+    std::cout << "Press Q to Quit" << std::endl;
+    std::cout << " " << std::endl;
+     /*ask for a message from the user, this message will be read by server */
+    std::cout << "Please enter the message : \n" <<std::endl;
