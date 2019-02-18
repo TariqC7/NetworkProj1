@@ -41,3 +41,8 @@ int main( int argc, char *argv[] )
     socklen_t len;
     /*call socket() function*/
     sockfd = socket(AF_INET, SOCK_STREAM, 0);
+    if(sockfd < 0)
+    {
+    perror("Error opening socket");
+    exit(1);
+    }
