@@ -59,3 +59,9 @@ int main(int argc, char *argv[])
     close(sockfd);
         return 0;
 }
+
+void mainMenu() {
+    std::cout << "\n" << std::endl;
+    printf("Main Menu!\n");
+    printf(" 1. Input Message \n");
+    printf(" 2. Exit \n");
