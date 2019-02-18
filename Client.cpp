@@ -75,4 +75,9 @@ void mainMenu() {
                 loop = true;
                 exit(0);
                 break;
+            default:
+                printf("%s","Invalid choice!\n");
+            break;
+        }
+}
                 
