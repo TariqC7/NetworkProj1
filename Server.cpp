@@ -53,3 +53,9 @@ int main( int argc, char *argv[] )
     serv_addr.sin_family = AF_INET;
     serv_addr.sin_addr.s_addr = INADDR_ANY;
     serv_addr.sin_port = htons(portno);
+    
+    /*bind the host address using bind() call*/
+    if(bind(sockfd,(struct sockaddr *) &serv_addr,sizeof(serv_addr)) < 0) {
+    perror("Error on binding!");
+    exit(1);
+    }
