@@ -98,3 +98,7 @@ void msg(void)  {
         /* read server response */
             bzero(buffer,256);
             n = read(sockfd,buffer,256);
+            if (n < 0)  {
+                perror("ERROR reading from socket");
+                exit(1);
+            }
