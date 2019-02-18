@@ -70,3 +70,9 @@ void mainMenu() {
     getchar();
         switch(choice) {
             case 1: msg();
+                break;
+            case 2: std::cout << "Exiting";
+                loop = true;
+                exit(0);
+                break;
+                
