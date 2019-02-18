@@ -59,3 +59,8 @@ int main( int argc, char *argv[] )
     perror("Error on binding!");
     exit(1);
     }
+    int yes =1;
+    if(setsockopt(sockfd,SOL_SOCKET,SO_REUSEADDR,&yes, sizeof(yes)) == -1) {
+    perror("setsockopt");
+    exit(1);
+    }
