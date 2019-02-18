@@ -70,3 +70,8 @@ int main( int argc, char *argv[] )
     len = sizeof(cli_addr);
      while(connected == false) {
         newsockfd = accept(sockfd,(struct sockaddr*)&cli_addr,&len);
+         if(newsockfd < 0) {
+            perror("Error on accept!");
+            exit(1);
+            }
+         
