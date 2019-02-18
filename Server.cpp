@@ -31,3 +31,8 @@ void doProcessing(int sock) {
     }
 }
     
+int main( int argc, char *argv[] )
+{
+    int sockfd,pid,newsockfd,portno,clientn;
+    struct sockaddr_in serv_addr,cli_addr;
+    char buffer[256];
