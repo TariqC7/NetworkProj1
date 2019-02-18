@@ -65,3 +65,8 @@ void mainMenu() {
     printf("Main Menu!\n");
     printf(" 1. Input Message \n");
     printf(" 2. Exit \n");
+    printf("Enter your choice\n");
+    scanf("%d",&choice);
+    getchar();
+        switch(choice) {
+            case 1: msg();
