@@ -36,3 +36,8 @@ int main( int argc, char *argv[] )
     int sockfd,pid,newsockfd,portno,clientn;
     struct sockaddr_in serv_addr,cli_addr;
     char buffer[256];
+    bool connected;
+    int n;
+    socklen_t len;
+    /*call socket() function*/
+    sockfd = socket(AF_INET, SOCK_STREAM, 0);
