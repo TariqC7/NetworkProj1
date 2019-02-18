@@ -8,3 +8,7 @@
 #include <string.h>
 #include <sys/types.h>
 #include <netdb.h>
+#include <stdbool.h>
+#include <signal.h>
+#include <iostream>
+#include <sstream>
