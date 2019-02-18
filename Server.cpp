@@ -25,3 +25,9 @@ void doProcessing(int sock) {
         n=write(sock,"I got your msg",18);
     }
     
+    if(n<0) {
+        perror("Error writing to socket");
+        exit(1);
+    }
+}
+    
