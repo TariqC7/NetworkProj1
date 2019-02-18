@@ -54,3 +54,8 @@ int main(int argc, char *argv[])
             perror("Error connecting");
             exit(1);
      }
+        mainMenu();
+    }
+    close(sockfd);
+        return 0;
+}
