@@ -89,4 +89,8 @@ int main( int argc, char *argv[] )
             return 0;
         }
         else
-            
+        {
+            close(newsockfd);
+        }
+    }
+    return 0;
