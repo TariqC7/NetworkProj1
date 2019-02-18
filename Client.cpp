@@ -38,3 +38,8 @@ int main(int argc, char *argv[])
             perror("ERROR opening socket");
             exit(1);
       }
+     server = gethostbyname(argv[1]);
+     if (server == NULL) {
+            fprintf(stderr,"ERROR, no such host\n");
+            exit(0);
+     }
