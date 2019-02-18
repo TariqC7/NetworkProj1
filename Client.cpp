@@ -23,3 +23,9 @@ char options[100];
 char buffer[255];
 int choice;
 char c;
+
+int main(int argc, char *argv[])
+{
+    while(loop==false) {
+        if (argc < 3) {
+            fprintf(stderr,"usage %s hostname port\n", argv[0]);
