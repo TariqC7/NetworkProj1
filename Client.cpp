@@ -95,3 +95,6 @@ void msg(void)  {
                 perror("ERROR writing to socket");
                 exit(1);
             }
+        /* read server response */
+            bzero(buffer,256);
+            n = read(sockfd,buffer,256);
