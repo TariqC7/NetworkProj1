@@ -14,3 +14,8 @@ void doProcessing(int sock) {
     char buffer[255];
     bzero(buffer,256);
     n =read(sock,buffer,255);
+    
+    if(n < 0) {
+        perror("Error from reading socket");
+        exit(1);
+    }
