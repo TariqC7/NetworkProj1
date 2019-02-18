@@ -83,3 +83,10 @@ int main( int argc, char *argv[] )
         }
         if(pid == 0)
         {
+            /*Client process*/
+            close(sockfd);
+            doPrcoessing(newsockfd);
+            return 0;
+        }
+        else
+            
